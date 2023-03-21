@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Registrations</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="/plugins/select2/css/select2.min.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+	<!-- Page Content -->
+	<div class="content">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-md-7 col-lg-8 col-xl-9">
+
+					<form action="/add" method="post">
+						<!-- Education -->
+					<div class="card">
+
+						<div class="card-body">
+
+							
+						<% if(error) {%>
+
+							<h3><span class="text-danger"> <%= error %></span></h3>
+	
+							<% } %>
+	
+							<% if(success) {%>
+	
+							<h3><span class="text-danger text-center"> <%= success %></span></h3>
+	
+							<% } %>
+							<h4 class="card-title">Region information</h4>
+							<div class="education-info">
+								<div class="row form-row education-cont">
+									<div class="col-12 col-md-10 col-lg-11">
+										<div class="row form-row">
+											<div class="col-12 col-md-6 col-lg-12">
+												<div class="form-group">
+													<label>Region name</label>
+													<select name="region" id="region" class="form-control">
+														<option value="">Choose region</option>
+														<option value="Dar">Dar es Salaam</option>
+														<option value="Mwanza">Mwanza</option>
+														<option value="Arusha">Arusha</option>
+														<option value="Dodoma">Dodoma</option>
+													</select>
+												</div>
+											</div>
+
+										
+												<div class="col-12 col-md-6 col-lg-12">
+													<div class="form-group">
+														<label>District Name</label>
+														<input type="text" name="district" placeholder="Enter district"
+															class="form-control">
+													</div>
+											
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- /Education -->
+
+					<!-- Experience -->
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title">Bus routes information</h4>
+							<div class="experience-info">
+								<div class="row form-row experience-cont">
+									<div class="col-12 col-md-10 col-lg-11">
+										<div class="row form-row">
+											
+											<div class="col-12 col-md-6 col-lg-6">
+												<div class="form-group">
+													<label>Route Name</label>
+													<input type="text" name="routes" placeholder="Enter route name"
+														class="form-control">
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-6">
+												<div class="form-group">
+													<label>From</label>
+													<input type="text" name="from" placeholder="Enter route source"
+														class="form-control">
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-6">
+												<div class="form-group">
+													<label>To</label>
+													<input type="text" name="to" placeholder="Enter route destination"
+														class="form-control">
+												</div>
+											</div>
+											<div class="col-12 col-md-6 col-lg-6">
+												<div class="form-group">
+													<label>Via</label>
+													<input type="text" name="via"
+														placeholder="Enter road(s) normally used" class="form-control">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="add-more">
+								<a href="javascript:void(0);" class="add-experience"><i class="fa fa-plus-circle"></i>
+									Add More</a>
+							</div>
+						</div>
+					</div>
+					<!-- /Experience -->
+					
+					<!-- Registrations -->
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title">District boundary geopoints</h4>
+							<div class="registrations-info">
+								<div class="row form-row reg-cont">
+									<div class="col-12 col-md-5">
+										<div class="form-group">
+											<label>Latitude</label>
+											<input type="text" name="latitude" placeholder="Enter latitude" class="form-control">
+										</div>
+									</div>
+									<div class="col-12 col-md-5">
+										<div class="form-group">
+											<label>Longitude</label>
+											<input type="text" name="longitude" placeholder="Enter longitude" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="add-more">
+								<a href="javascript:void(0);" class="add-reg"><i class="fa fa-plus-circle"></i> Add
+									More</a>
+							</div>
+						</div>
+					</div>
+					<!-- /Registrations -->
+
+					<div class="submit-section submit-btn-bottom">
+						<button type="submit" class="btn btn-primary btn-block btn-rounded submit-btn">Save Changes</button>
+					</div>
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /Page Content -->
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<script src="/js/bootstrap.min.js"></script>
+
+
+	<!-- Profile Settings JS -->
+	<script src="/js/profile-settings.js"></script>
+
+	<!-- Custom JS -->
+	<script src="/js/script.js"></script>
+
+</body>
+
+</html>
